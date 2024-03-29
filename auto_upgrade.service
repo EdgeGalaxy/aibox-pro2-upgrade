@@ -1,0 +1,14 @@
+[Unit]
+Description=Auto Upgrade Service
+After=network.target
+
+
+[Service]
+User=nvidia
+WorkingDirectory=/home/nvidia/workspace/aibox-pro2-upgrade/
+ExecStart=/usr/bin/python3 /home/nvidia/workspace/aibox-pro2-upgrade/run.py
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
